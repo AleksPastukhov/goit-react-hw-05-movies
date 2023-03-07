@@ -1,4 +1,4 @@
-import { useEffect, useState, useParams } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { theMovieDbAPI } from '../../services/theMovieDbApi';
 
@@ -23,7 +23,7 @@ export function Home() {
       .then(data => setTrendingFilms(data.results))
       .catch(err => console.log(err));
   }, []);
-    const { film.id } = useParams()
+  // const { film.id } = useParams()
   return (
     <ul>
       {trendingFilms.map(film => (

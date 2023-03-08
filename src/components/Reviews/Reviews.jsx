@@ -1,3 +1,3 @@
-export function Reviews() {
+export const Reviews = () => {
   return <div>Hello</div>;
-}
+};

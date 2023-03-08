@@ -11,7 +11,7 @@ import { getTrendsMovie } from '../../../services/theMovieDbApi';
 //   VIDEOS: 'videos',
 // };
 
-export function Home() {
+export const Home = () => {
   // const [page, setPage] = useState(1);
   // const [type, setType] = useState(TypeRequest.TRENDS);
   // const [movieId, setMovieId] = useState(null);
@@ -33,4 +33,4 @@ export function Home() {
       ))}
     </ul>
   );
-}
+};

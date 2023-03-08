@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   position: relative;
   width: 95%;
-  margin: 60px auto;
+  margin: 20px auto;
   padding: 10px;
   box-shadow: ${p => p.theme.boxShadow};
 `;
@@ -21,30 +21,6 @@ export const Description = styled.p`
   margin-bottom: 20px;
 `;
 
-export const GoBackBtn = styled(NavLink)`
-  position: absolute;
-  top: -45px;
-  left: 0;
-  border: 1px solid ${p => p.theme.colors.primaryTextColor};
-  border-radius: 5px;
-  padding: 4px;
-  color: ${p => p.theme.colors.primaryTextColor};
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-
-  transition: color ${p => p.theme.transition},
-    transform ${p => p.theme.transition};
-
-  &:hover,
-  &:focus,
-  &.active {
-    color: ${p => p.theme.colors.accentСolor};
-    border: 1px solid ${p => p.theme.colors.accentСolor};
-    transform: scale(1.04);
-  }
-`;
-
 export const NavList = styled.ul`
   padding: 10px;
   display: flex;
@@ -59,13 +35,15 @@ export const NavItem = styled(NavLink)`
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  transition: color ${p => p.theme.transition};
+  transition: color ${p => p.theme.transition},
+    transform ${p => p.theme.transition};
 
   &:hover,
   &:focus,
   &.active {
     color: ${p => p.theme.colors.accentСolor};
     border: 1px solid ${p => p.theme.colors.accentСolor};
+    transform: scale(1.04);
   }
 `;
 

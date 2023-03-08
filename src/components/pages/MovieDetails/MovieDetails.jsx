@@ -1,12 +1,10 @@
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// import { Home } from '../Home/Home';
 import { getMovieById } from '../../../services/theMovieDbApi';
 import {
   NavItem,
   Wrapper,
   FilmInfo,
-  GoBackBtn,
   NavList,
   InfoBox,
   FilmTitle,
@@ -19,20 +17,19 @@ export const MovieDetails = () => {
   const [filmData, setFilmData] = useState([]);
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
-  console.log(location);
 
   useEffect(() => {
     getMovieById(movieId)
       .then(data => setFilmData(data))
       .catch(err => console.log(err));
   }, [movieId]);
-  console.log(filmData);
+
   return (
-    <>
+    <Wrapper>
+      <NavItem type="button" to="/">
+        Go back
+      </NavItem>
       <Wrapper>
-        <GoBackBtn type="button" to="/">
-          Go back
-        </GoBackBtn>{' '}
         <FilmInfo>
           <img
             src={`https://image.tmdb.org/t/p/w500${filmData.poster_path}`}
@@ -76,6 +73,9 @@ export const MovieDetails = () => {
           </li>
         </NavList>
       </Wrapper>
-    </>
+      <Wrapper>
+        <Outlet />
+      </Wrapper>
+    </Wrapper>
   );
 };

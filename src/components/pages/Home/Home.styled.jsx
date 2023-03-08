@@ -22,7 +22,6 @@ export const HomeList = styled.ul`
   gap: 20px;
   margin: 0;
   padding: 0 0 20px 0;
-  list-style: none;
 `;
 
 export const Card = styled.li`

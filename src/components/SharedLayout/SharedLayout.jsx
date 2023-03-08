@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { NavItem, Wrapper, Nav, List } from './ShraedLayout.styled';
+import { NavItem, Wrapper, Nav, List } from './SharedLayout.styled';
 
-export const ShraedLayout = () => {
+export const SharedLayout = () => {
   return (
     <Wrapper>
       <Nav>

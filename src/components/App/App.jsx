@@ -2,7 +2,7 @@ import GlobalStyle from '../GlobalStyle';
 // import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Wrapper } from './App.styled';
-import { ShraedLayout } from '../ShraedLayot/ShraedLayot';
+import { SharedLayout } from '../SharedLayout/SharedLayout';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { MovieDetails } from '../pages/MovieDetails/MovieDetails';
 import { Home } from '../pages/Home/Home';
@@ -19,10 +19,10 @@ export const App = () => {
   return (
     <Wrapper>
       <Routes>
-        <Route path="/" element={<ShraedLayout />}>
+        <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" element={<MovieDetails />}>
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<MovieDetails />}>
             <Route path="reviews" element={<Reviews />} />
             <Route path="cast" element={<Cast />} />
           </Route>

@@ -1,6 +1,13 @@
-import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getTrendsMovie } from '../../../services/theMovieDbApi';
+import {
+  HomeList,
+  Link,
+  FilmCard,
+  FilmTitle,
+  SectionTitle,
+  Card,
+} from '../Home/Home.styled';
 
 // const TypeRequest = {
 //   TRENDS: 'trends',
@@ -25,12 +32,23 @@ export const Home = () => {
   }, []);
 
   return (
-    <ul>
-      {trendingFilms.map(film => (
-        <li key={film.id}>
-          <NavLink to={`/movies/${film.id}`}>{film.title}</NavLink>
-        </li>
-      ))}
-    </ul>
+    <>
+      <SectionTitle>Trending today</SectionTitle>
+      <HomeList>
+        {trendingFilms.map(film => (
+          <Card key={film.id}>
+            <Link to={`/movies/${film.id}`}>
+              <FilmCard>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                  alt=""
+                />
+                <FilmTitle>{film.title}</FilmTitle>
+              </FilmCard>
+            </Link>
+          </Card>
+        ))}
+      </HomeList>
+    </>
   );
 };

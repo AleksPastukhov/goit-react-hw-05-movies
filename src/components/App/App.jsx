@@ -1,6 +1,7 @@
 import GlobalStyle from '../GlobalStyle';
 // import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Wrapper } from './App.styled';
 import { ShraedLayout } from '../ShraedLayot/ShraedLayot';
 import { NotFound } from '../pages/NotFound/NotFound';
 import { MovieDetails } from '../pages/MovieDetails/MovieDetails';
@@ -16,7 +17,7 @@ import { Cast } from '../../components/Cast/Cast';
 
 export const App = () => {
   return (
-    <>
+    <Wrapper>
       <Routes>
         <Route path="/" element={<ShraedLayout />}>
           <Route index element={<Home />} />
@@ -29,6 +30,6 @@ export const App = () => {
         </Route>
       </Routes>
       <GlobalStyle />
-    </>
+    </Wrapper>
   );
 };

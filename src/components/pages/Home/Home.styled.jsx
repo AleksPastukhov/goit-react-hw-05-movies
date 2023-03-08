@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const SectionTitle = styled.h1`
   text-align: center;
   margin: 0;
-  padding: 10px 5px;
+  padding: 20px 5px;
   font-size: 32px;
 `;
 export const FilmTitle = styled.h2`
@@ -17,7 +17,9 @@ export const FilmTitle = styled.h2`
 export const HomeList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   margin: 0;
   padding: 0 0 20px 0;
   list-style: none;
@@ -28,8 +30,8 @@ export const Card = styled.li`
   overflow: hidden;
   transition: transform ${p => p.theme.transition},
     box-shadow ${p => p.theme.transition};
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     transform: scale(1.04);
     box-shadow: ${p => p.theme.boxShadow};
   }
@@ -41,7 +43,7 @@ export const Link = styled(NavLink)`
 `;
 
 export const FilmCard = styled.div`
-  height: 440px;
   width: 250px;
+  height: 440px;
   background-color: ${p => p.theme.colors.backgroundColor};
 `;

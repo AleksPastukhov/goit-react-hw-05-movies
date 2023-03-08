@@ -42,6 +42,8 @@ export const Home = () => {
                 <img
                   src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
                   alt=""
+                  width="250px"
+                  height="375px"
                 />
                 <FilmTitle>{film.title}</FilmTitle>
               </FilmCard>

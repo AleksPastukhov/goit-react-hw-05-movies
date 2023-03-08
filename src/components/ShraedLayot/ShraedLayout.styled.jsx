@@ -7,8 +7,13 @@ export const NavItem = styled(NavLink)`
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
+  border: 1px solid ${p => p.theme.colors.primaryTextColor};
+  border-radius: 5px;
+  &:hover,
+  &:focus,
   &.active {
     color: ${p => p.theme.colors.accentСolor};
+    border: 1px solid ${p => p.theme.colors.accentСolor};
   }
 `;
 

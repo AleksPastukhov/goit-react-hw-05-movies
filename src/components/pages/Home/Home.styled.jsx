@@ -45,4 +45,9 @@ export const FilmCard = styled.div`
   width: 250px;
   height: 440px;
   background-color: ${p => p.theme.colors.backgroundColor};
+
+  img {
+    width: 250px;
+    height: 375px;
+  }
 `;

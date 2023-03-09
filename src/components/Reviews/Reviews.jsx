@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getMovieById } from '../../services/theMovieDbApi';
 import { Title, Desc } from './Reviews.styled';
 
-export function Reviews() {
+const Reviews = () => {
   const [reviewsData, setReviewsData] = useState([]);
   const { movieId } = useParams();
 
@@ -14,13 +14,21 @@ export function Reviews() {
   }, [movieId]);
 
   return (
-    <ul>
-      {reviewsData.map(review => (
-        <li key={review.id}>
-          <Title>Author: {review.author}</Title>
-          <Desc>{review.content}</Desc>
-        </li>
-      ))}
-    </ul>
+    <>
+      {!!reviewsData.length ? (
+        <ul>
+          {reviewsData.map(review => (
+            <li key={review.id}>
+              <Title>Author: {review.author}</Title>
+              <Desc>{review.content}</Desc>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <h3>We donn`t any reviews for this movie.</h3>
+      )}
+    </>
   );
-}
+};
+
+export default Reviews;

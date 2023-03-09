@@ -13,6 +13,7 @@ injectGlobal`
   box-sizing: inherit;
 }
 body {
+    background-color: ${p => p.theme.colors.backgroundColor};
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;

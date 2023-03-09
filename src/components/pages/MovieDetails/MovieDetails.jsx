@@ -1,5 +1,5 @@
 import { useParams, useLocation, Outlet } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { getMovieById } from '../../../services/theMovieDbApi';
 import {
   NavItem,
@@ -79,7 +79,9 @@ export const MovieDetails = () => {
         </NavList>
       </Wrapper>
       <Wrapper>
-        <Outlet />
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Outlet />
+        </Suspense>
       </Wrapper>
     </Wrapper>
   );

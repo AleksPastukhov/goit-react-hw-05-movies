@@ -4,7 +4,7 @@ import { getMovieById } from '../../services/theMovieDbApi';
 import { CastList, CastCard } from './Cast.styled';
 import noFoto from '../../images/no-foto.png';
 
-export function Cast() {
+const Cast = () => {
   const [castData, setCastData] = useState([]);
   const { movieId } = useParams();
 
@@ -15,8 +15,6 @@ export function Cast() {
       })
       .catch(err => console.log(err));
   }, [movieId]);
-
-  console.log(castData);
 
   return (
     <CastList>
@@ -43,4 +41,6 @@ export function Cast() {
       ))}
     </CastList>
   );
-}
+};
+
+export default Cast;

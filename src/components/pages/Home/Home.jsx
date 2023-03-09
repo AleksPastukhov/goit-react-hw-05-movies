@@ -8,21 +8,9 @@ import {
   SectionTitle,
   Card,
 } from '../Home/Home.styled';
+import img from '../../../images/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg';
 
-// const TypeRequest = {
-//   TRENDS: 'trends',
-//   SEARCH: 'search',
-//   DETAILS: `movieDetails`,
-//   CREDITS: `movieCredits`,
-//   REWIEWS: `movieReviews`,
-//   VIDEOS: 'videos',
-// };
-
-export const Home = () => {
-  // const [page, setPage] = useState(1);
-  // const [type, setType] = useState(TypeRequest.TRENDS);
-  // const [movieId, setMovieId] = useState(null);
-  // const [query, setQuery] = useState('');
+const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
 
   useEffect(() => {
@@ -39,12 +27,16 @@ export const Home = () => {
           <Card key={film.id}>
             <Link to={`/movies/${film.id}`}>
               <FilmCard>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                  alt=""
-                  width="250px"
-                  height="375px"
-                />
+                {film.poster_path ? (
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+                    alt=""
+                    width="250px"
+                    height="375px"
+                  />
+                ) : (
+                  <img src={img} alt="" width="250px" height="375px" />
+                )}
                 <FilmTitle>{film.title}</FilmTitle>
               </FilmCard>
             </Link>
@@ -54,3 +46,5 @@ export const Home = () => {
     </>
   );
 };
+
+export default Home;

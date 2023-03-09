@@ -1,5 +1,6 @@
-import { SearchBar, SearchForm } from './SearchBox.styled';
 import { BiSearchAlt } from 'react-icons/bi';
+import PropTypes from 'prop-types';
+import { SearchBar, SearchForm } from './SearchBox.styled';
 
 export const SearchBox = ({ onFormSabmit }) => {
   return (
@@ -19,4 +20,8 @@ export const SearchBox = ({ onFormSabmit }) => {
       </SearchForm>
     </SearchBar>
   );
+};
+
+SearchBox.prototypes = {
+  onFormSabmit: PropTypes.func.isRequired,
 };

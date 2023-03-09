@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { getTrendsMovie } from '../../../services/theMovieDbApi';
 import {
   HomeList,
@@ -12,7 +13,7 @@ import img from '../../../images/depositphotos_12766135-stock-photo-3d-cinema-cl
 
 const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
-
+  const location = useLocation();
   useEffect(() => {
     getTrendsMovie()
       .then(data => setTrendingFilms(data.results))
@@ -25,19 +26,24 @@ const Home = () => {
       <HomeList>
         {trendingFilms.map(film => (
           <Card key={film.id}>
-            <Link to={`/movies/${film.id}`}>
+            <Link to={`/movies/${film.id}`} state={{ from: location }}>
               <FilmCard>
                 {film.poster_path ? (
                   <img
                     src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                    alt=""
+                    alt={film.title || film.name}
                     width="250px"
                     height="375px"
                   />
                 ) : (
-                  <img src={img} alt="" width="250px" height="375px" />
+                  <img
+                    src={img}
+                    alt={film.title || film.name}
+                    width="250px"
+                    height="375px"
+                  />
                 )}
-                <FilmTitle>{film.title}</FilmTitle>
+                <FilmTitle>{film.title || film.name}</FilmTitle>
               </FilmCard>
             </Link>
           </Card>

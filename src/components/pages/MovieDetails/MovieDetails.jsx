@@ -32,16 +32,16 @@ export const MovieDetails = () => {
       </NavItem>
       <Wrapper>
         <FilmInfo>
-          {filmData.poster_path ? (
-            <img
-              src={`https://image.tmdb.org/t/p/w500${filmData.poster_path}`}
-              alt=""
-              width="300px"
-              height="440px"
-            />
-          ) : (
-            <img src={img} alt="" width="300px" height="440px" />
-          )}
+          <img
+            src={
+              filmData.poster_path
+                ? `https://image.tmdb.org/t/p/w500${filmData.poster_path}`
+                : img
+            }
+            alt={`Poster ${filmData.title || filmData.name}`}
+            width="300px"
+            height="440px"
+          />
           <InfoBox>
             <div>
               <FilmTitle> {filmData.title}</FilmTitle>

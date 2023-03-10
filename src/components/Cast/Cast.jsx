@@ -21,21 +21,16 @@ const Cast = () => {
       {castData.map(actor => (
         <CastCard key={actor.cast_id}>
           <p>Character: {actor.character}</p>
-          {actor.profile_path ? (
-            <img
-              src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`}
-              alt={actor.original_name}
-              width="150px"
-              height="225px"
-            />
-          ) : (
-            <img
-              src={noFoto}
-              alt={actor.original_name}
-              width="150px"
-              height="225px"
-            />
-          )}
+          <img
+            src={
+              actor.profile_path
+                ? `https://image.tmdb.org/t/p/w500${actor.profile_path}`
+                : noFoto
+            }
+            alt={`Foto ${actor.original_name}`}
+            width="150px"
+            height="225px"
+          />
           <h2>{actor.name}</h2>
         </CastCard>
       ))}

@@ -28,21 +28,16 @@ const Home = () => {
           <Card key={film.id}>
             <Link to={`/movies/${film.id}`} state={{ from: location }}>
               <FilmCard>
-                {film.poster_path ? (
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                    alt={film.title || film.name}
-                    width="250px"
-                    height="375px"
-                  />
-                ) : (
-                  <img
-                    src={img}
-                    alt={film.title || film.name}
-                    width="250px"
-                    height="375px"
-                  />
-                )}
+                <img
+                  src={
+                    film.poster_path
+                      ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
+                      : img
+                  }
+                  alt={`Poster ${film.title || film.name}`}
+                  width="250px"
+                  height="375px"
+                />
                 <FilmTitle>{film.title || film.name}</FilmTitle>
               </FilmCard>
             </Link>

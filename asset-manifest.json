@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.c3d5249d.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.23c6ea33.js",
-    "static/js/107.23bcf16e.chunk.js": "/goit-react-hw-05-movies/static/js/107.23bcf16e.chunk.js",
-    "static/js/50.befcbeb7.chunk.js": "/goit-react-hw-05-movies/static/js/50.befcbeb7.chunk.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.3472263c.js",
+    "static/js/101.8da2c249.chunk.js": "/goit-react-hw-05-movies/static/js/101.8da2c249.chunk.js",
+    "static/js/50.bc03610c.chunk.js": "/goit-react-hw-05-movies/static/js/50.bc03610c.chunk.js",
     "static/js/387.b531f05d.chunk.js": "/goit-react-hw-05-movies/static/js/387.b531f05d.chunk.js",
     "static/js/736.131cd37a.chunk.js": "/goit-react-hw-05-movies/static/js/736.131cd37a.chunk.js",
     "static/js/248.8efcb821.chunk.js": "/goit-react-hw-05-movies/static/js/248.8efcb821.chunk.js",
     "static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg": "/goit-react-hw-05-movies/static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.93fa7dfdeae2a9152326.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.c3d5249d.css.map": "/goit-react-hw-05-movies/static/css/main.c3d5249d.css.map",
-    "main.23c6ea33.js.map": "/goit-react-hw-05-movies/static/js/main.23c6ea33.js.map",
-    "107.23bcf16e.chunk.js.map": "/goit-react-hw-05-movies/static/js/107.23bcf16e.chunk.js.map",
-    "50.befcbeb7.chunk.js.map": "/goit-react-hw-05-movies/static/js/50.befcbeb7.chunk.js.map",
+    "main.3472263c.js.map": "/goit-react-hw-05-movies/static/js/main.3472263c.js.map",
+    "101.8da2c249.chunk.js.map": "/goit-react-hw-05-movies/static/js/101.8da2c249.chunk.js.map",
+    "50.bc03610c.chunk.js.map": "/goit-react-hw-05-movies/static/js/50.bc03610c.chunk.js.map",
     "387.b531f05d.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.b531f05d.chunk.js.map",
     "736.131cd37a.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.131cd37a.chunk.js.map",
     "248.8efcb821.chunk.js.map": "/goit-react-hw-05-movies/static/js/248.8efcb821.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.23c6ea33.js"
+    "static/js/main.3472263c.js"
   ]
 }

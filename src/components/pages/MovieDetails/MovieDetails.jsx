@@ -15,19 +15,23 @@ import img from '../../../images/depositphotos_12766135-stock-photo-3d-cinema-cl
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
-  const [filmData, setFilmData] = useState([]);
+  const [filmData, setFilmData] = useState(null);
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+  const backLinkHref = location?.state?.from ?? '/';
 
   useEffect(() => {
     getMovieById(movieId)
-      .then(data => setFilmData(data))
+      .then(setFilmData)
       .catch(err => console.log(err));
   }, [movieId]);
 
+  if (!filmData) {
+    return <h2>Loading...</h2>;
+  }
+
   return (
     <Wrapper>
-      <NavItem type="button" to="/">
+      <NavItem type="button" to={backLinkHref}>
         Go back
       </NavItem>
       <Wrapper>

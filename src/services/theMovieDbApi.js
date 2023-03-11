@@ -21,7 +21,7 @@ export async function getTrendsMovie() {
   };
 
   const respons = await axios.get(`${BASE_URL}${typeRequest.trends}`, options);
-  return respons.data;
+  return respons.data.results;
 }
 
 export async function searchMovie(query) {
@@ -38,7 +38,7 @@ export async function searchMovie(query) {
   };
 
   const respons = await axios.get(`${BASE_URL}${typeRequest.search}`, options);
-  return respons.data;
+  return respons.data.results;
 }
 
 export async function getMovieById(movieId, type = 'details') {

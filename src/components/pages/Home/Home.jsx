@@ -1,49 +1,21 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import { getTrendsMovie } from '../../../services/theMovieDbApi';
-import {
-  HomeList,
-  Link,
-  FilmCard,
-  FilmTitle,
-  SectionTitle,
-  Card,
-} from '../Home/Home.styled';
-import img from '../../../images/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg';
+import { FilmList } from '../../FilmsList/FilmsList';
+import { SectionTitle } from '../Home/Home.styled';
 
 const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
-  const location = useLocation();
+
   useEffect(() => {
     getTrendsMovie()
-      .then(data => setTrendingFilms(data.results))
+      .then(setTrendingFilms)
       .catch(err => console.log(err));
   }, []);
 
   return (
     <>
       <SectionTitle>Trending today</SectionTitle>
-      <HomeList>
-        {trendingFilms.map(film => (
-          <Card key={film.id}>
-            <Link to={`/movies/${film.id}`} state={{ from: location }}>
-              <FilmCard>
-                <img
-                  src={
-                    film.poster_path
-                      ? `https://image.tmdb.org/t/p/w500${film.poster_path}`
-                      : img
-                  }
-                  alt={`Poster ${film.title || film.name}`}
-                  width="250px"
-                  height="375px"
-                />
-                <FilmTitle>{film.title || film.name}</FilmTitle>
-              </FilmCard>
-            </Link>
-          </Card>
-        ))}
-      </HomeList>
+      <FilmList films={trendingFilms} />
     </>
   );
 };

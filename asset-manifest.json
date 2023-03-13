@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.c3d5249d.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.3472263c.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.4ce860ae.js",
     "static/js/101.8da2c249.chunk.js": "/goit-react-hw-05-movies/static/js/101.8da2c249.chunk.js",
     "static/js/50.bc03610c.chunk.js": "/goit-react-hw-05-movies/static/js/50.bc03610c.chunk.js",
     "static/js/387.b531f05d.chunk.js": "/goit-react-hw-05-movies/static/js/387.b531f05d.chunk.js",
@@ -10,7 +10,7 @@
     "static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg": "/goit-react-hw-05-movies/static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.93fa7dfdeae2a9152326.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.c3d5249d.css.map": "/goit-react-hw-05-movies/static/css/main.c3d5249d.css.map",
-    "main.3472263c.js.map": "/goit-react-hw-05-movies/static/js/main.3472263c.js.map",
+    "main.4ce860ae.js.map": "/goit-react-hw-05-movies/static/js/main.4ce860ae.js.map",
     "101.8da2c249.chunk.js.map": "/goit-react-hw-05-movies/static/js/101.8da2c249.chunk.js.map",
     "50.bc03610c.chunk.js.map": "/goit-react-hw-05-movies/static/js/50.bc03610c.chunk.js.map",
     "387.b531f05d.chunk.js.map": "/goit-react-hw-05-movies/static/js/387.b531f05d.chunk.js.map",
@@ -19,6 +19,6 @@
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.3472263c.js"
+    "static/js/main.4ce860ae.js"
   ]
 }
